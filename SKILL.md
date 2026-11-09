@@ -12,22 +12,25 @@ license: MIT
 
 ## 来源与分工
 
-本技能融合 12 个开源项目的**方法与规则**（完整致谢见仓库 `CREDITS.md`）：
+本技能融合 15 个开源项目。**每个项目都有独立的参考文件**，不是只在致谢里点名（完整致谢见 `CREDITS.md`）：
 
-| 项目 | 在本技能里承担 |
-| --- | --- |
-| carmahhawwari/ui-design-brain | 60+ 组件用法、布局惯例、别名映射 → `references/components.md` |
-| nextlevelbuilder/ui-ux-pro-max-skill | 10 类 UX 规则的优先级排序 → `references/ux-rules.md` |
-| vercel-labs/web-interface-guidelines | 100+ 条代码级审计规则 → `references/web-audit.md` |
-| github/awesome-copilot@premium-frontend-ui | 沉浸式动效与编排标准 → `references/motion.md` |
-| Leonxlnx/taste-skill | 三旋钮、brief 推断、陈词滥调规避、重设计协议 → `references/art-direction.md` |
-| anthropics/skills@frontend-design | token 先行 + 三种 AI 默认长相 → `references/art-direction.md` |
-| jakubkrehel/make-interfaces-feel-better | 对齐/间距/阴影/圆角/字型手感 → `references/craft-details.md` |
-| pbakaus/impeccable | 四种 surface 模式、craft floor、绝对禁令 → 本文件 + `craft-details.md` |
-| emilkowalski/skill | 动效分级与代码级手感 → `motion.md` 第八节 |
-| plugin87/ux-ui-agent-skills | WCAG 2.2、DTCG token、客观验收门禁 → 门禁标准对齐 |
-| Laith0003/ux-skill | 反 AI 风格规则分类与品牌规范思路 → 反模式黑名单 |
-| joinutlope/variate、superdesign-skill、oil-oil/oil-ui、codeswithroh/tastemaker | 多变体探索与参考图收敛 → `references/explore-variants.md` |
+| 项目 | 在本技能里承担 | 参考文件 |
+| --- | --- | --- |
+| carmahhawwari/ui-design-brain | 60+ 组件的用法、布局惯例、别名映射 | `components.md` |
+| nextlevelbuilder/ui-ux-pro-max | 10 类规则优先级 + 视觉层级/色彩心理/交互模式 | `ux-rules.md`、`design-intelligence.md` |
+| vercel-labs/web-interface-guidelines | 100+ 条代码级审计规则与 `file:line` 输出格式 | `web-audit.md` |
+| github/awesome-copilot@premium-frontend-ui | Awwwards 级结构、入场编排、滚动叙事、性能红线 | `motion.md` |
+| Leonxlnx/taste-skill | 业务 kind → 页面计划、三旋钮、暗色/重设计/preflight | `taste-skill.md`、`art-direction.md` |
+| anthropics/skills@frontend-design | token 先行四要素、三种 AI 默认长相、微排版禁忌 | `frontend-design.md`、`art-direction.md` |
+| jakubkrehel/make-interfaces-feel-better | 同心圆角、光学对齐、阴影/边框、可打断动画 | `craft-feel.md`、`craft-details.md` |
+| pbakaus/impeccable | 四种 surface 模式、craft floor、Refuse 清单、设计词汇 | `surface-modes.md` |
+| emilkowalski/skills | 频率表、缓动、编排角色、动效词汇、性能症状表、手势 | `motion-craft.md`、`motion-performance.md` |
+| plugin87/ux-ui-agent-skills | DTCG token、组件契约、七态、50 条客观门禁、house rules | `tokens-gates.md` |
+| Laith0003/ux-skill | 160 套品牌档案、152 条反 AI 风格规则、Figma variables | `brand-profiles.md` |
+| codeswithroh/tastemaker | reference-board / style-lock / decisions.log 品味档案 | `taste-profile.md` |
+| superdesigndev/superdesign-skill | 环境预检 → 抽 design-system → 多方向探索 | `explore-variants.md` |
+| oil-oil/oil-ui | 产品事实 → 主角/动作 → 灰度结构 → 真实画面评审 | `explore-variants.md` |
+| Nutlope/variate | 多变体并排生成、在浏览器里选择与收敛 | `explore-variants.md` |
 
 不要按来源分段执行；按下面的顺序合成一条路径。
 
@@ -64,6 +67,10 @@ license: MIT
 ## 2. 定方向：三个旋钮 + 避开默认款
 
 先读 `references/art-direction.md`，并显式声明三个旋钮（默认 `variance 8 / motion 6 / density 4`；后台把 density 提到 7–8、motion 降到 3–4）。
+
+再读 `references/taste-skill.md` 判断**业务类型**（software / gaming / tech / product / service / place）：
+页面计划由类型决定，不由风格词决定。place 靠真实照片、product 靠产品细节图、software 靠界面与数据、
+service 靠人与案例；用同一套 hero + 三卡片去套所有类型，是最典型的模板错误。
 
 常规方向：Modern SaaS / Apple 级极简 / 企业后台 / 创意作品集 / 数据看板。
 沉浸式方向（仅在需要强表现力时）：Editorial Brutalism / Organic Fluidity / Cyber Technical / Cinematic Pacing。
@@ -197,11 +204,20 @@ risk:      一个能说出理由的审美冒险
 | --- | --- |
 | `references/components.md` | 具体组件的用法、布局惯例、别名映射 |
 | `references/ux-rules.md` | 审计/评审，或需要某类规则的完整判断依据 |
+| `references/design-intelligence.md` | 需要视觉层级、色彩心理、交互模式的具体判断 |
 | `references/web-audit.md` | 代码级 Web 审计（100+ 条，`file:line` 输出） |
-| `references/craft-details.md` | 打磨手感、对齐/间距/阴影/圆角/字型/状态 |
-| `references/art-direction.md` | 定方向、三旋钮、陈词滥调、暗色模式、重设计协议 |
-| `references/motion.md` | 动效分级、编排、性能红线、技术栈落地 |
-| `references/explore-variants.md` | 多变体探索、参考图品味档案、收敛 |
+| `references/taste-skill.md` | 判断业务类型该长什么样、页面计划、重设计顺序 |
+| `references/frontend-design.md` | 写设计计划、识别三种 AI 默认长相、微排版禁忌 |
+| `references/surface-modes.md` | 判断页面该克制还是该表现力；craft floor 与 Refuse 清单 |
+| `references/craft-feel.md` | 同心圆角、光学对齐、阴影/边框、可打断动画 |
+| `references/craft-details.md` | 间距节奏、字型微调、状态反馈、10 项手感自检 |
+| `references/motion.md` | 动效分级 L1–L4、编排、性能红线、技术栈落地 |
+| `references/motion-craft.md` | 频率表、缓动、Lead/Support 角色、动效词汇、Before-After 审查 |
+| `references/motion-performance.md` | 掉帧症状表、审查标准、手势规则 |
+| `references/tokens-gates.md` | 建 token 体系、组件契约、七态、客观门禁 |
+| `references/brand-profiles.md` | 找行业坐标、160 套品牌档案用法、Figma variables |
+| `references/taste-profile.md` | 把参考图变成 style-lock，防止风格漂移 |
+| `references/explore-variants.md` | 多变体探索（superdesign / oil-ui / variate）与收敛 |
 | `references/app-polish.md` | 原生端精修与交付前自检 |
 
-版本 v2.0 · MIT · 致谢与来源链接见 `CREDITS.md`
+版本 v2.1 · MIT · 15 个参考项目与来源链接见 `CREDITS.md`

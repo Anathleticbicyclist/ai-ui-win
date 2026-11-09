@@ -1,7 +1,8 @@
 # AI UI Win
 
-一个把"UI 设计与交互"做成固定流水线的 Agent Skill。融合 12 个主流 UI/UX 开源项目的方法与规则，
-面向网页、后台、仪表盘、移动端原生界面，覆盖**设计 → 实现 → 审计 → 重设计 → 多方案探索 → 交付自检**全链路。
+一个把"UI 设计与交互"做成固定流水线的 Agent Skill。融合 15 个主流 UI/UX 开源项目的方法与规则，
+**每个项目都有独立参考文件**，面向网页、后台、仪表盘、移动端原生界面，覆盖
+**设计 → 实现 → 审计 → 重设计 → 多方案探索 → 交付自检**全链路。
 
 > 目标不是"让 AI 画得更好看"，而是**让每次产出都有可核对的判断标准**：方向是选的，不是随机生成的；
 > 门禁是逐条过的，不是"整体不错"。
@@ -25,17 +26,27 @@
 
 ```
 ai-ui-win/
-├── SKILL.md                     # 主文件：流水线 + 触发条件 + references 路由
-├── references/
-│   ├── components.md            # 60+ 组件用法、布局惯例、别名映射
-│   ├── ux-rules.md              # 10 类 UX 规则的优先级与完整判断依据
-│   ├── web-audit.md             # Vercel Web Interface Guidelines（100+ 条代码级规则）
-│   ├── craft-details.md         # 手感细节：对齐/间距/阴影/圆角/字型/状态
-│   ├── art-direction.md         # 三旋钮、brief 推断、陈词滥调、暗色模式、重设计协议
-│   ├── motion.md                # 动效分级、编排、性能红线、技术栈落地
-│   ├── explore-variants.md      # 多变体探索、参考图品味档案、收敛
-│   └── app-polish.md            # 原生端（iOS/Android）精修与交付前自检
-└── CREDITS.md                   # 全部参考项目、作者与许可
+├── SKILL.md                        # 主文件：流水线 + 触发条件 + references 路由
+├── references/                     # 18 个文件，按需加载
+│   ├── components.md               # ui-design-brain：60+ 组件用法、布局惯例、别名
+│   ├── ux-rules.md                 # ui-ux-pro-max：10 类规则优先级与完整判断依据
+│   ├── design-intelligence.md      # ui-ux-pro-max：视觉层级 / 色彩心理 / 交互模式
+│   ├── web-audit.md                # Vercel Web Interface Guidelines：100+ 条代码级规则
+│   ├── taste-skill.md              # taste-skill：业务 kind → 页面计划、重设计顺序
+│   ├── frontend-design.md          # Anthropic：token 先行四要素、三种 AI 默认长相
+│   ├── surface-modes.md            # impeccable：四种 surface 模式、craft floor、Refuse
+│   ├── craft-feel.md               # make-interfaces-feel-better：圆角/对齐/阴影/可打断
+│   ├── craft-details.md            # 手感体系：间距节奏、字型微调、状态、10 项自检
+│   ├── motion.md                   # premium-frontend-ui：Awwwards 级编排与性能红线
+│   ├── motion-craft.md             # emilkowalski：频率表、缓动、角色编排、动效词汇
+│   ├── motion-performance.md       # emilkowalski：掉帧症状表、审查标准、手势
+│   ├── tokens-gates.md             # ux-ui-agent-skills：DTCG token、契约、七态、50 门禁
+│   ├── brand-profiles.md           # ux-skill：160 套品牌档案、152 条反 AI 规则
+│   ├── taste-profile.md            # tastemaker：reference-board / style-lock / 决策日志
+│   ├── explore-variants.md         # superdesign / oil-ui / variate：探索与收敛协议
+│   ├── art-direction.md            # 三旋钮、陈词滥调、暗色模式、重设计协议
+│   └── app-polish.md               # 原生端（iOS/Android）精修与交付前自检
+└── CREDITS.md                      # 15 个参考项目、作者与许可
 ```
 
 `SKILL.md` 是唯一入口，其余文件按需读取（渐进披露），不会一次性塞满上下文。
@@ -133,13 +144,17 @@ iOS、Flutter、React Native）、设计系统与 token、组件库、交互动�
 - Leonxlnx/taste-skill
 - anthropics/skills（frontend-design）
 - jakubkrehel/make-interfaces-feel-better
-- pbakaus/impeccable
-- emilkowalski/skill
+- pbakaus/impeccable（Apache 2.0）
+- emilkowalski/skills（animate / choreograph / animation-performance / gestures 等）
 - plugin87/ux-ui-agent-skills
 - Laith0003/ux-skill
-- joinutlope/variate · superdesigndev/superdesign-skill · oil-oil/oil-ui · codeswithroh/tastemaker
+- codeswithroh/tastemaker
+- superdesigndev/superdesign-skill
+- oil-oil/oil-ui
+- Nutlope/variate
 
-逐一说明贡献与链接见 [CREDITS.md](CREDITS.md)。若你是原作者并希望调整署名或移除内容，请开 issue，我们会尽快处理。
+每个项目对应哪个参考文件、贡献了什么，见 [CREDITS.md](CREDITS.md)。
+若你是原作者并希望调整署名或移除内容，请开 issue，我们会尽快处理。
 
 ---
 
